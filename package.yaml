@@ -35,11 +35,19 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - hk-kafka-topics-connector
+  integration-test:
+    main: Spec.hs
+    source-dirs:
+    - test/integration
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
 
 tests:
-  hk-kafka-topics-connector-test:
+  test:
     main:                Spec.hs
-    source-dirs:         test
+    source-dirs:         test/unit
     ghc-options:
     - -threaded
     - -rtsopts
