@@ -3,7 +3,21 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: hw-kafka-client-3.1.0@sha256:78982724bf4b27805e61d374aa67a10e729416c917ac9f530b15bea5c7f922e6,4616
+    pantry-tree:
+      size: 2055
+      sha256: 59c7045a9fbc1ab32f01f0457f6e60c851ea8bce9e0229631e95166d512ca2ae
+  original:
+    hackage: hw-kafka-client-3.1.0
+- completed:
+    hackage: bytestring-0.10.10.0@sha256:06b2e84f1bc9ab71a162c0ca9e88358dd6bbe5cb7fdda2d6d34b6863c367ec95,8944
+    pantry-tree:
+      size: 2788
+      sha256: 0c8345618e3d7440989d5001ff57d01896548195338bf7a70d8453710a43418b
+  original:
+    hackage: bytestring-0.10.10.0
 snapshots:
 - completed:
     size: 492015
