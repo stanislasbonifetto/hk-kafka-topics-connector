@@ -41,7 +41,6 @@ packages:
 #
 extra-deps:
 - hw-kafka-client-3.1.0
-- bytestring-0.10.10.0
 
 # Use nix integration in stack to provide librdkafka without depending
 # on whatever is installed on the OS (other than nix).
