@@ -1,15 +1,16 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Lib
-    ( runConsumerExample
+module TopicConsumer
+    ( runTopicConsumer
     ) where
 
 import Control.Exception (bracket)
 import Data.Monoid ((<>))
 import Kafka.Consumer
+import BrokerConfiguration
 
 -- Global consumer properties
 consumerProps :: ConsumerProperties
-consumerProps = brokersList [BrokerAddress "localhost:9092"]
+consumerProps = brokersList brokers
              <> groupId (ConsumerGroupId "consumer_example_group")
              <> noAutoCommit
              <> logLevel KafkaLogInfo
@@ -20,8 +21,8 @@ consumerSub = topics [TopicName "kafka-client-example-topic"]
            <> offsetReset Latest
 
 -- Running consumer
-runConsumer :: IO ()
-runConsumer = do
+runTopicConsumer :: IO ()
+runTopicConsumer = do
     res <- bracket mkConsumer clConsumer runHandler
     print res
     where

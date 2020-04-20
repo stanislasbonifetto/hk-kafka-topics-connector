@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import TopicConsumer
 
 main :: IO ()
-main = runConsumer
+main = runTopicConsumer
