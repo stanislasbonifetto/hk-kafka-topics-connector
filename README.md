@@ -3,6 +3,23 @@ Haskell kafka project to:
 
 consume from `topic-a` -> `message-a` -> transform -> `message-b` -> produce to -> `topic-b`
 
+# Build
+## Dependencies
+To build the project you need:
+1. [Haskell Stack](https://docs.haskellstack.org/en/stable/README/)
+2. [Nix](https://nixos.org/nix/)
+
+### Install dependencies
+1. Haskell Stack
+```
+curl -sSL https://get.haskellstack.org/ | sh
+```
+
+2. Nix
+```
+curl -L https://nixos.org/nix/install | sh
+```
+
 # Tests
 The project has:
 - unit tests
