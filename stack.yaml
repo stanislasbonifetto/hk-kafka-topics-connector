@@ -43,6 +43,16 @@ extra-deps:
 - hw-kafka-client-3.1.0
 - bytestring-0.10.10.0
 
+# Use nix integration in stack to provide librdkafka without depending
+# on whatever is installed on the OS (other than nix).
+# See also:
+# https://docs.haskellstack.org/en/stable/nix_integration/
+# https://medium.com/@james_32022/using-nix-to-fetch-c-libraries-6847230bbbcd
+
+nix:
+  enable: true
+  packages: [rdkafka]
+
 # Override default flag values for local packages and extra-deps
 # flags: {}
 
