@@ -1,2 +1,11 @@
+import Test.Hspec
+import Configuration( AppConfiguration, local, name, brokers )
+
 main :: IO ()
-main = putStrLn "Unit Test suite not yet implemented"
+main = hspec $ do
+  describe "local" $ do
+    it "name" $ do
+      name local `shouldBe` "local"
+    
+    it "brokers" $ do
+      brokers local `shouldBe` ["localhost:9092"]

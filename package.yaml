@@ -56,3 +56,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - hk-kafka-topics-connector
+    - hspec

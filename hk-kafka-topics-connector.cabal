@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1f52741362dcafbb6b0e90a1ad129cf380223e2b9433ceb36bc68a165aa8210c
+-- hash: 2363d15acc6fc9ec8ad8a8967dcbab95b37a7d4c254d75ae0e8e629fe7892032
 
 name:           hk-kafka-topics-connector
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      Configuration
       Lib
   other-modules:
       Paths_hk_kafka_topics_connector
@@ -77,5 +78,6 @@ test-suite test
       base >=4.7 && <5
     , bytestring
     , hk-kafka-topics-connector
+    , hspec
     , hw-kafka-client
   default-language: Haskell2010
