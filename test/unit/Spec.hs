@@ -1,5 +1,5 @@
 import Test.Hspec
-import Configuration( AppConfiguration, local, name, brokers )
+import Configuration
 
 main :: IO ()
 main = hspec $ do
