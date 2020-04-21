@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2363d15acc6fc9ec8ad8a8967dcbab95b37a7d4c254d75ae0e8e629fe7892032
+-- hash: 8cbfd966e57af825218ddb42e59f3bd7b20fc652a9688870719b8f4ff6834566
 
 name:           hk-kafka-topics-connector
 version:        0.1.0.0
@@ -70,6 +70,7 @@ test-suite test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      ConfigurationSpec
       Paths_hk_kafka_topics_connector
   hs-source-dirs:
       test/unit

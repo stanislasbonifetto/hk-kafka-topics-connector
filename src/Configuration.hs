@@ -1,6 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Configuration
-    where
+module Configuration where
 
 data AppConfiguration = MakeAppConfiguration
     {   name :: String
