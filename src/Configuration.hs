@@ -15,4 +15,5 @@ data AppConfiguration = MakeAppConfiguration
 local :: AppConfiguration
 local = MakeAppConfiguration 
     { name = "local"
-    , brokers = ["localhost:9092"]}
+    , brokers = ["localhost:9092"]
+    }
