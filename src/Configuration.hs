@@ -1,13 +1,25 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Configuration where
+module Configuration (
+    AppConfiguration(..),
+    local
+) where
+
+import Kafka.Types
 
 data AppConfiguration = MakeAppConfiguration
     {   name :: String
-    ,   brokers :: [String]
+    ,   brokers :: [BrokerAddress]
+    ,   topicFrom :: TopicName
+    ,   topicTo :: TopicName
     }
 
+defaultConfig :: AppConfiguration
+defaultConfig = MakeAppConfiguration 
+    { name = "default"
+    , brokers = [BrokerAddress "localhost:9092"]
+    , topicFrom = TopicName "topic-a"
+    , topicTo = TopicName "topic-b"
+    }    
+
 local :: AppConfiguration
-local = MakeAppConfiguration 
-    { name = "local"
-    , brokers = ["localhost:9092"]
-    }
+local = defaultConfig { name = "local" }

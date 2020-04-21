@@ -6,18 +6,18 @@ module TopicConsumer
 import Control.Exception (bracket)
 import Data.Monoid ((<>))
 import Kafka.Consumer
-import BrokerConfiguration
+import Configuration
 
 -- Global consumer properties
 consumerProps :: ConsumerProperties
-consumerProps = brokersList brokers
+consumerProps = brokersList (brokers local)
              <> groupId (ConsumerGroupId "consumer_example_group")
              <> noAutoCommit
              <> logLevel KafkaLogInfo
 
 -- Subscription to topics
 consumerSub :: Subscription
-consumerSub = topics [TopicName "kafka-client-example-topic"]
+consumerSub = topics [topicFrom local]
            <> offsetReset Latest
 
 -- Running consumer

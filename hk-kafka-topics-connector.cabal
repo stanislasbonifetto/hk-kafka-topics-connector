@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 43eb39a667bf55d1ca0ea91cc3b7eb0b54b2faed062399db64865a1dac079aab
+-- hash: 6e790fabf1d121b1e7890eab766e670826204223199373eb7cdc88ba81105363
 
 name:           hk-kafka-topics-connector
 version:        0.1.0.0
@@ -27,7 +27,6 @@ source-repository head
 
 library
   exposed-modules:
-      BrokerConfiguration
       Configuration
       TopicConsumer
   other-modules:

@@ -14,7 +14,7 @@ producerProps = brokersList [BrokerAddress "localhost:9092"]
 
 -- Topic to send messages to
 targetTopic :: TopicName
-targetTopic = TopicName "kafka-client-example-topic"
+targetTopic = TopicName "topic-a"
 
 -- Run an example
 runProducerExample :: IO ()
