@@ -1,2 +1,1 @@
-main :: IO ()
-main = putStrLn "Unit Test suite not yet implemented"
+{-# OPTIONS_GHC -F -pgmF hspec-discover #-}

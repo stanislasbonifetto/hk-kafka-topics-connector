@@ -5,6 +5,13 @@
 
 packages:
 - completed:
+    hackage: hspec-2.7.1@sha256:0aa48928ce80a34f8ff8c5ef114bb6807edfb8d884bcd7211eceed710e7fb7a8,1769
+    pantry-tree:
+      size: 532
+      sha256: 8128733a7ef4760bbe5d978f2145fdcb29f4491b17db11e8c05b409441ceecb4
+  original:
+    hackage: hspec-2.7.1
+- completed:
     hackage: hw-kafka-client-3.1.0@sha256:78982724bf4b27805e61d374aa67a10e729416c917ac9f530b15bea5c7f922e6,4616
     pantry-tree:
       size: 2055
